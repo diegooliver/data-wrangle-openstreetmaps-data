@@ -1,0 +1,5 @@
+Chosen Area: Metro Area of City of Curitiba in Brazil
+Description and Reason: Curitiba is the capital and largest city of the brazilian state of Paraná. Has a population of 1,7 million people. It has the forth largest economy of Brazil. I have chosen this Metro area as my girlfriend was born over there.
+
+Link to Curitiba OSM Metro Area:
+https://s3.amazonaws.com/metro-extracts.mapzen.com/curitiba_brazil.osm.bz2
