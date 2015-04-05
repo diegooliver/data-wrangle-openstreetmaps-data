@@ -1,0 +1,114 @@
+In [58]: db.elements.find({'website':{"$exists": 1}}).count()
+Out[58]: 161
+
+In [59]: db.elements.find({'phone':{"$exists": 1}}).count()
+Out[59]: 125
+
+In [60]: db.elements.find({'address':{"$exists": 1}}).count()
+Out[60]: 1522
+
+In [62]: db.elements.find({'created':{"$exists": 1}}).count()
+Out[62]: 332897
+
+> db.elements.aggregate([{"$group":{"_id":"$created.user", "count":{"$sum":1}}}]
+)
+{ "_id" : "jeffti", "count" : 1 }
+{ "_id" : "Rob Guedes", "count" : 1 }
+{ "_id" : "daniloadur", "count" : 2 }
+{ "_id" : "wagfrag", "count" : 1 }
+{ "_id" : "Rudolf Mayer", "count" : 2 }
+{ "_id" : "BugBuster", "count" : 1 }
+{ "_id" : "mtmail", "count" : 1 }
+{ "_id" : "Erivan Pinheiro", "count" : 2 }
+{ "_id" : "jeancz", "count" : 1 }
+{ "_id" : "Vistuba", "count" : 2 }
+{ "_id" : "Dionei Miodutzki", "count" : 1 }
+{ "_id" : "Rouni", "count" : 1 }
+{ "_id" : "F4310", "count" : 3 }
+{ "_id" : "Walter Schlögl", "count" : 1 }
+{ "_id" : "MDENDENA", "count" : 2 }
+{ "_id" : "Jose Niz", "count" : 7 }
+{ "_id" : "cdavila", "count" : 4 }
+{ "_id" : "Bruno Ritter", "count" : 1 }
+{ "_id" : "bvivi", "count" : 1 }
+{ "_id" : "Südpack", "count" : 1 }
+
+> db.elements.aggregate([{"$match":{"building":{"$exists":1}}},{"$group":{"_id":"$building", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+
+{ "_id" : "yes", "count" : 4226 }
+{ "_id" : "house", "count" : 522 }
+{ "_id" : "residential", "count" : 268 }
+{ "_id" : "church", "count" : 34 }
+{ "_id" : "commercial", "count" : 33 }
+{ "_id" : "industrial", "count" : 26 }
+{ "_id" : "apartments", "count" : 22 }
+{ "_id" : "school", "count" : 21 }
+{ "_id" : "hospital", "count" : 15 }
+{ "_id" : "stable", "count" : 13 }
+
+db.elements.aggregate([{"$match":{"brand":{"$exists":1}}},{"$group":{"_id":"$brand", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+{ "_id" : "Ipiranga", "count" : 29 }
+{ "_id" : "Multimarca", "count" : 14 }
+{ "_id" : "BR", "count" : 13 }
+{ "_id" : "Shell", "count" : 10 }
+{ "_id" : "Branca", "count" : 4 }
+{ "_id" : "Fiat", "count" : 2 }
+{ "_id" : "Esso", "count" : 2 }
+{ "_id" : "Petrobras", "count" : 2 }
+{ "_id" : "Toyota", "count" : 2 }
+{ "_id" : "Kawasaki", "count" : 1 }
+
+db.elements.aggregate([{"$match":{"created_by":{"$exists":1}}},{"$group":{"_id":"$created_by", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+
+{ "_id" : "JOSM", "count" : 966 }
+{ "_id" : "Potlatch 0.9c", "count" : 29 }
+{ "_id" : "Potlatch 0.10f", "count" : 20 }
+{ "_id" : "Potlatch 0.10d", "count" : 4 }
+{ "_id" : "Potlatch 0.9b", "count" : 3 }
+
+db.elements.aggregate([{"$match":{"landuse":{"$exists":1}}},{"$group":{"_id":"$landuse", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+{ "_id" : "residential", "count" : 202 }
+{ "_id" : "forest", "count" : 93 }
+{ "_id" : "farm", "count" : 54 }
+{ "_id" : "industrial", "count" : 48 }
+{ "_id" : "cemetery", "count" : 30 }
+{ "_id" : "grass", "count" : 27 }
+{ "_id" : "reservoir", "count" : 25 }
+{ "_id" : "village_green", "count" : 24 }
+{ "_id" : "quarry", "count" : 15 }
+{ "_id" : "recreation_ground", "count" : 12 }
+
+db.elements.aggregate([{"$match":{"maxspeed":{"$exists":1}}},{"$group":{"_id":"$maxspeed", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+{ "_id" : "40", "count" : 809 }
+{ "_id" : "60", "count" : 450 }
+{ "_id" : "20", "count" : 192 }
+{ "_id" : "80", "count" : 176 }
+{ "_id" : "30", "count" : 165 }
+{ "_id" : "70", "count" : 126 }
+{ "_id" : "110", "count" : 74 }
+{ "_id" : "50", "count" : 5 }
+
+db.elements.aggregate([{"$match":{"sport":{"$exists":1}}},{"$group":{"_id":"$sport", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+
+{ "_id" : "soccer", "count" : 90 }
+{ "_id" : "tennis", "count" : 40 }
+{ "_id" : "swimming", "count" : 14 }
+{ "_id" : "basketball", "count" : 14 }
+{ "_id" : "volleyball", "count" : 9 }
+{ "_id" : "multi", "count" : 3 }
+{ "_id" : "athletics", "count" : 2 }
+{ "_id" : "skateboard", "count" : 2 }
+{ "_id" : "gymnastics", "count" : 2 }
+{ "_id" : "skating", "count" : 1 }
+
+db.elements.aggregate([{"$match":{"surface":{"$exists":1}}},{"$group":{"_id":"$surface", "count":{"$sum":1}}},{"$sort":{"count":-1}}, {"$limit":10}])
+{ "_id" : "asphalt", "count" : 4723 }
+{ "_id" : "dirt", "count" : 743 }
+{ "_id" : "unpaved", "count" : 621 }
+{ "_id" : "paved", "count" : 399 }
+{ "_id" : "ground", "count" : 243 }
+{ "_id" : "compacted", "count" : 184 }
+{ "_id" : "cobblestone", "count" : 102 }
+{ "_id" : "gravel", "count" : 67 }
+{ "_id" : "concrete", "count" : 28 }
+{ "_id" : "fine_gravel", "count" : 27 }
