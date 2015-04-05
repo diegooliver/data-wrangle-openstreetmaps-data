@@ -1,0 +1,1668 @@
+
+In [6]: check_keys('curitiba.osm')
+ref 
+ref 
+Rota Bikes Brancas Mob
+Rota Bikes Brancas Mob
+{'problemchars': 4, 'lower': 223982, 'other': 1066, 'lower_colon': 9750}
+
+In [10]: street_types('curitiba.osm')
+Al.: 1
+Alameda: 18
+Av: 4
+Av.: 5
+Avenida: 223
+Aveninda: 1
+BR: 1
+Br: 1
+BR116: 1
+Estrada: 6
+Filipinas: 1
+Francisco: 1
+Galeria: 1
+Hospital: 1
+Jacarezinho: 1
+Linha: 1
+Manoel: 1
+Nossa: 1
+Pra: 16
+R.: 39
+Rod.: 1
+Rodovia: 20
+Rua: 1136
+Rui: 6
+Travessa: 3
+Visconde: 1
+
+
+
+In [12]: elements("curitiba.osm")
+node: 295895
+nd: 363670
+bounds: 1
+member: 4032
+tag: 117401
+relation: 1013
+way: 37002
+osm: 1
+
+In [3]: element_parameters("curitiba.osm", "node")
+changeset
+uid
+timestamp
+lon
+version
+user
+lat
+id
+
+In [4]: element_parameters("curitiba.osm", "nd")
+ref
+
+In [5]: element_parameters("curitiba.osm", "bounds")
+origin
+minlat
+maxlon
+minlon
+maxlat
+
+In [6]: element_parameters("curitiba.osm", "member")
+ref
+role
+type
+
+In [7]: element_parameters("curitiba.osm", "relation")
+changeset
+uid
+timestamp
+version
+user
+id
+
+In [8]: element_parameters("curitiba.osm", "way")
+changeset
+uid
+timestamp
+version
+user
+id
+
+In [9]: element_parameters("curitiba.osm", "osm")
+version
+generator
+
+In [21]: tagelements("curitiba.osm")
+access: 793
+addr:city: 339
+addr:country: 110
+addr:housenumber: 1277
+addr:postcode: 263
+addr:street: 1492
+admin_level: 117
+amenity: 1612
+area: 138
+barrier: 509
+bicycle: 371
+boundary: 211
+brand: 106
+bridge: 631
+building: 5284
+building:levels: 135
+bus: 142
+created_by: 1022
+crossing: 243
+cuisine: 145
+electrified: 137
+fixme: 156
+foot: 747
+gauge: 137
+highway: 31594
+landuse: 580
+lanes: 1342
+layer: 820
+leisure: 540
+lit: 316
+man_made: 183
+maxspeed: 1997
+motor_vehicle: 274
+name: 18989
+natural: 888
+noexit: 133
+oneway: 14353
+opening_hours: 111
+operator: 345
+phone: 127
+place: 200
+power: 3052
+railway: 308
+ref: 917
+restriction: 732
+route: 133
+segregated: 108
+service: 479
+shop: 543
+source: 8818
+sport: 184
+surface: 7215
+survey:date: 672
+tourism: 150
+traffic_calming: 154
+tunnel: 110
+type: 1018
+waterway: 325
+website: 164
+wheelchair: 106
+
+In [10]: tagelementsvalues("curitiba.osm", "access")
+customers: 44
+no: 346
+permissive: 62
+designated: 6
+private: 1040
+agricultural: 4
+yes: 42
+public: 42
+
+In [22]: tagelementsvalues("curitiba.osm", "addr:country")
+BR: 110
+
+In [23]: tagelementsvalues("curitiba.osm", "addr:city")
+Pinhais: 3
+Araucária: 9
+Campo Magro: 1
+Jardim Amélia - Pinhais: 1
+Balsa Nova: 18
+Campina Grande do Sul: 2
+Colombo: 3
+Quatro Barras: 1
+São José dos Pinhais: 30
+São José dos Pinias: 1
+curitiba: 2
+Curitiba: 265
+Contenda: 1
+Fanny: 1
+Tijucas do Sul: 1
+
+In [24]: tagelementsvalues("curitiba.osm", "addr:postcode")
+80250-190: 1
+80620010: 1
+80730-000: 1
+80020-320: 1
+83030-640: 1
+80530-912: 1
+80050360: 5
+83040-210: 5
+82510-000: 1
+80810-900: 1
+80410-210: 2
+83005-350: 1
+80310-100: 1
+80410-060: 1
+81510-040: 1
+83508-453: 1
+81530-020: 2
+81730-080: 1
+80060-000: 1
+83005-280: 1
+82970-000: 1
+82.130-080: 1
+80420-010: 1
+80410-100: 2
+80045-260: 1
+82400-000: 1
+80410-180: 1
+80530-910: 1
+80230-090: 1
+83325-585: 1
+81450-360: 1
+80250-210: 1
+83005-360: 1
+82530-020: 1
+81560-360: 1
+80045-380: 1
+83005-010: 2
+80050-370: 1
+80020-280: 1
+80050-470: 1
+80230-000: 1
+81320000: 1
+81270-730: 1
+81530-434: 1
+82310-110: 1
+80240-031: 1
+80060-070: 1
+80730-290: 1
+80060-110: 1
+80215-270: 2
+81580-010: 1
+80420000: 2
+83650-000: 18
+80050-480: 1
+80420011: 2
+80420-000: 4
+80050470: 3
+82025-160: 1
+83508-577: 1
+83005-000: 7
+80240041: 1
+80250-160 ?: 1
+83015-210: 1
+80050-981: 1
+80410001: 3
+83020-260: 3
+80010-200: 2
+82820310: 1
+82020470: 1
+81730040: 1
+81530-270: 1
+81460275: 1
+81540-130: 1
+82560-020: 1
+83413-000: 1
+80440-020: 1
+80420-020: 1
+83508-575: 1
+83020-000: 5
+80710-570: 1
+82510901: 2
+83325-882: 1
+80730-201: 1
+81690-100: 1
+81750-400: 1
+83707-440: 1
+80050-250: 2
+82200-000: 1
+81050380: 1
+81050-000: 1
+81020-010: 1
+83005-420: 3
+80215-090: 1
+81250-460: 1
+82940-110: 1
+82515030: 1
+83430000: 1
+43508-430: 1
+82130-210: 1
+82510-290: 2
+83411-510: 1
+81050430: 1
+82515-270: 1
+80520-260: 1
+83015140: 1
+81850-000: 1
+80220-181: 1
+80220-180: 1
+80240-000: 1
+81530-100: 2
+82960-180: 1
+80010-190: 1
+81650-210: 2
+80240-060: 1
+82560040: 1
+81530-310: 1
+82515-290: 1
+637: 1
+81540-150: 1
+83540000: 1
+83005-450: 1
+81560-000: 2
+80730-420: 2
+82560440: 1
+80410-140: 1
+83015-716: 1
+83730-000: 1
+83705-170: 1
+80420: 1
+83040-200: 1
+80430-180: 2
+83411-000: 1
+81610-000: 1
+82100-380: 1
+83508-250: 1
+80035-010: 1
+83005-00: 1
+81630-000: 1
+8300-502: 1
+80050-152: 1
+80050380: 4
+81530-150: 1
+557: 1
+81550-310: 1
+83330-140: 1
+83015-140: 1
+80045-330: 1
+81650-140: 2
+81531-970: 1
+83055-320: 1
+82400-490: 1
+80410-230: 2
+83414-510: 1
+83412-000: 1
+80230-110: 1
+81210-040: 1
+81530-000: 1
+81670-080: 1
+81570-001: 3
+80530-909: 1
+80530-908: 1
+80810-130: 1
+83060-460: 1
+80410140: 2
+83508-187: 1
+81030-030: 2
+80410-201: 1
+80410-200: 1
+83005-340: 6
+81770-340: 1
+83508-420: 1
+80730-030: 2
+83005-180: 1
+83190-000: 1
+81910-000: 1
+81070-000: 1
+83508-576: 1
+80540220: 1
+81650-220: 1
+80050-350: 1
+80030-340: 1
+83331-330: 1
+83703-035: 2
+80240-110: 2
+
+In [25]: tagelementsvalues("curitiba.osm", "amenity")
+taxi: 18
+drinking_water: 17
+marketplace: 6
+public_building: 24
+cinema: 6
+Estacionamento Público: 1
+post_box: 5
+telephone: 12
+library: 14
+clinic: 7
+embassy: 1
+college: 15
+parking: 249
+post_office: 17
+cafe: 14
+social_facility: 1
+bureau_de_change: 1
+toilets: 17
+police: 35
+baby_hatch: 1
+p: 1
+hospital: 56
+veterinary: 8
+pharmacy: 88
+kindergarten: 4
+escola: 1
+community_centre: 1
+Organização: 1
+fountain: 10
+car_rental: 7
+fuel: 187
+bicycle_parking: 11
+bbq: 3
+fast_food: 63
+fire_station: 9
+POsto de Gasolina: 1
+theatre: 7
+shelter: 1
+car_wash: 7
+estacionamento publico: 1
+pub: 11
+waste_basket: 2
+dentist: 1
+recycling: 1
+doctors: 3
+grave_yard: 2
+ice_cream: 2
+bank: 79
+courthouse: 7
+place_of_worship: 96
+school: 130
+bar: 24
+restaurant: 165
+parking_entrance: 4
+university: 58
+atm: 24
+nightclub: 2
+townhall: 3
+swimming_pool: 13
+parking_space: 5
+r: 1
+bus_station: 48
+bench: 2
+childcare: 1
+
+In [12]: tagelementsvalues("curitiba.osm", "admin_level")
+10: 178
+3: 2
+4: 2
+8: 52
+
+In [26]: tagelementsvalues("curitiba.osm", "area")
+yes: 134
+no: 4
+
+In [13]: tagelementsvalues("curitiba.osm", "barrier")
+lift_gate: 30
+toll_booth: 22
+fence: 26
+wall: 558
+entrance: 2
+stile: 2
+bollard: 6
+gate: 276
+hedge: 92
+block: 4
+
+In [14]: tagelementsvalues("curitiba.osm", "bicycle")
+yes: 346
+dismount: 34
+designated: 248
+permissive: 6
+no: 108
+
+In [15]: tagelementsvalues("curitiba.osm", "boundary")
+protected_area: 6
+administrative: 416
+
+In [16]: tagelementsvalues("curitiba.osm", "brand")
+Michelin: 2
+Multimanrca: 2
+Chevrolet: 2
+Hyundai: 2
+Jeep;Dodge: 2
+BR: 26
+Bosch: 2
+Suzuki: 2
+Branca: 8
+FIAT: 2
+Shell: 20
+Goodyear: 2
+Honda: 2
+Banca: 2
+Ford: 2
+RF: 2
+Ipiranga: 58
+Itaú: 2
+Peugeot: 2
+Esso: 4
+Yokohama: 2
+Fiat: 4
+Citroën: 2
+Nissan: 2
+Harley-Davidson: 2
+Toyota: 4
+Volvo: 2
+Jac Motors: 2
+Kawasaki: 2
+Triumph: 2
+Multimarca: 28
+HSBC: 2
+Repsol: 2
+Potencial: 2
+Wolksvagen: 2
+Petrobras: 4
+Audi: 2
+
+In [17]: tagelementsvalues("curitiba.osm", "bridge")
+aqueduct: 10
+yes: 1208
+viaduct: 44
+
+In [18]: tagelementsvalues("curitiba.osm", "building")
+industrial: 52
+office: 20
+apartments: 48
+house: 1044
+college: 2
+greenhouse: 2
+church: 70
+cathedral: 4
+yes: 8472
+hangar: 22
+garage: 2
+generic building: 6
+residential: 536
+hospital: 30
+mosque: 2
+stable: 28
+warehouse: 8
+public: 16
+Generic residential: 10
+hotel: 8
+commercial: 66
+supermarket: 20
+hut: 4
+garages: 2
+construction: 2
+chapel: 6
+school: 42
+university: 24
+roof: 6
+temple: 2
+Generic Building: 2
+retail: 10
+
+In [19]: tagelementsvalues("curitiba.osm", "building:levels")
+26: 2
+30: 10
+roof:levels=2: 4
+roof:levels=1: 86
+roof_level=1: 2
+18: 2
+44: 2
+roof:levels=0: 2
+roof: 12
+1: 24
+3: 10
+2: 68
+4: 32
+6: 4
+9: 2
+8: 2
+23: 2
+roof=1: 2
+0,1,2,3,4,5,6,7,8,9,10,11,12: 2
+
+tagelementsvalues("curitiba.osm", "created_by")
+JOSM: 1932
+Potlatch 0.9c: 58
+Potlatch 0.9b: 6
+Potlatch 0.10f: 40
+Potlatch 0.10d: 8
+
+In [22]: tagelementsvalues("curitiba.osm", "crossing")
+island: 4
+yes: 2
+zebra: 2
+traffic_signals: 398
+uncontrolled: 80
+
+In [23]: tagelementsvalues("curitiba.osm", "electrified")
+no: 274
+
+In [24]: tagelementsvalues("curitiba.osm", "fixme")
+esboço grosseiro: 18
+Ajustar contorno à área onde predominam moradias vizinhas.: 294
+
+In [25]: tagelementsvalues("curitiba.osm", "foot")
+permissive: 156
+designated: 290
+no: 20
+costumer: 6
+private: 14
+yes: 1008
+
+In [26]: tagelementsvalues("curitiba.osm", "gauge")
+1000: 274
+
+In [27]: tagelementsvalues("curitiba.osm", "highway")
+proposed: 4
+primary: 1162
+pedestrian: 114
+bridleway: 14
+secondary_link: 346
+tertiary: 3184
+mini_roundabout: 46
+primary_link: 314
+service: 2520
+residential: 34038
+motorway_link: 836
+cycleway: 102
+secondary: 2610
+turning_circle: 694
+living_street: 658
+speed_camera: 362
+track: 1562
+give_way: 16
+stop: 1516
+motorway_junction: 116
+motorway: 552
+tertiary_link: 354
+trunk: 736
+services: 10
+path: 466
+street_lamp: 2
+trunk_link: 542
+footway: 1462
+unclassified;residential: 6
+traffic_signals: 1848
+unclassified: 4130
+bus_stop: 990
+steps: 74
+crossing: 1502
+raceway: 12
+road: 288
+
+In [28]: tagelementsvalues("curitiba.osm", "landuse")
+industrial: 96
+greenfield: 2
+reservoir: 54
+civic: 2
+village_green: 48
+recreation_ground: 24
+meadow: 18
+residential: 406
+cemetery: 60
+lake: 8
+conservation: 2
+forest: 186
+basin: 10
+public: 2
+quarry: 30
+farm: 108
+commercial: 18
+construction: 8
+retail: 8
+landfill: 2
+military: 10
+railway: 4
+grass: 54
+
+In [29]: tagelementsvalues("curitiba.osm", "lanes")
+4; 2: 2
+1,2: 6
+1: 346
+3: 528
+2: 1722
+4: 80
+
+In [30]: tagelementsvalues("curitiba.osm", "layer")
+1: 1156
+3: 12
+2: 116
+-1: 344
+-3: 4
+-2: 8
+
+In [31]: tagelementsvalues("curitiba.osm", "leisure")
+nature_reserve: 6
+garden: 56
+fitness_station: 2
+track: 20
+golf_course: 4
+park: 338
+water_park: 2
+swimming_pool: 32
+margem de reserva ambiental: 2
+fishing: 20
+stadium: 32
+pitch: 354
+sports_centre: 112
+yes: 2
+recreation_ground: 20
+playground: 78
+
+In [32]: tagelementsvalues("curitiba.osm", "lit")
+yes: 626
+no: 6
+
+In [33]: tagelementsvalues("curitiba.osm", "man_made")
+pipeline: 28
+water_storage: 4
+storage_tank: 260
+wastewater_plant: 6
+water_tower: 8
+Pedestrian_Bridge: 6
+tower: 22
+works: 26
+water_tank: 6
+
+In [34]: tagelementsvalues("curitiba.osm", "motor_vehicle")
+permissive: 30
+no: 88
+designated: 4
+private: 414
+delivery: 2
+yes: 10
+
+In [36]: tagelementsvalues("curitiba.osm", "natural")
+spring: 54
+tree: 4
+bay: 4
+water: 620
+tree_row: 2
+wood: 982
+wetland: 24
+peak: 74
+w: 4
+grassland: 2
+cave_entrance: 6
+
+In [37]: tagelementsvalues("curitiba.osm", "noexit")
+yes: 266
+
+In [38]: tagelementsvalues("curitiba.osm", "oneway")
+1: 4
+yes: 8794
+-1: 300
+no: 19608
+
+In [39]: tagelementsvalues("curitiba.osm", "operator")
+COPEL: 2
+Polícia Militar do Paraná: 2
+Ale: 4
+Copel: 2
+Ipiranga: 70
+BB: 2
+Banco 24horas: 2
+Subway: 2
+Banco do Brasil: 20
+Inter 2 - Sentido Capão Raso - Sentido Hauer: 2
+TRIAR: 2
+CCAA: 2
+Habibi's: 2
+Pinheirinho/Carlos Gomes: 4
+BR: 10
+urbs: 2
+ECT: 2
+Inter 2: 2
+Corpo de Bombeiros do Paraná: 2
+Branca: 14
+FIAT: 2
+Prainhas: 2
+Shell: 36
+Bradesco: 16
+Ibis: 2
+Caixa Economica Federal: 2
+Honda: 4
+Potencial: 2
+Prefeitura Municipal de S. J. dos Pinhais: 2
+Caixa Rede 24 Horas: 2
+Chavelle: 2
+SPK: 2
+Itau: 6
+Santander: 10
+Itaú: 14
+Estapar: 2
+SAU: 4
+Petrobras: 48
+Fiat: 2
+Banco 24h: 2
+Unimed: 2
+Caixa Economica: 4
+Instituto Chico Mendes de Conservação da Biodiversidade: 4
+Inter II - Santa Felicidade/Bairro Alto: 2
+Toyota: 2
+ALL: 274
+Poder Legislativo Municipal: 2
+Jacomar: 2
+Ale Sat: 2
+Circular Sul: 4
+Pelicano: 2
+Inter 2 - Santa Felicidade/Bairro Alto: 2
+Mercedes: 2
+Empresa Brasileira de Correios|e Telégrafos Fone Fax: 2
+Slaviero: 2
+Igreja Murici: 2
+Partido Socialismo e Liberdade: 2
+Caixa Econômica Federal: 2
+Condor: 2
+Correios: 10
+Opet: 4
+OI: 2
+URBS: 2
+ALE: 4
+HSBC: 4
+Associação de Ensino Novo Ateneu: 2
+Sesc Paraná: 2
+Rede Fukami: 2
+SESC: 2
+Esso: 20
+Yes: 2
+13°BPM , 1ªCIA: 2
+Prefeitura de Curitiba: 2
+BRanca: 2
+
+In [40]: tagelementsvalues("curitiba.osm", "place")
+town: 22
+city: 18
+locality: 22
+farm: 2
+island: 2
+isolated_dwelling: 8
+hamlet: 20
+suburb: 264
+state: 2
+village: 38
+neighbourhood: 2
+
+In [41]: tagelementsvalues("curitiba.osm", "power")
+substation: 32
+converter: 4
+generator: 6
+switchgear: 6
+pole: 258
+station: 54
+tower: 5534
+sub_station: 2
+line: 208
+
+In [42]: tagelementsvalues("curitiba.osm", "railway")
+halt: 2
+level_crossing: 98
+rail: 276
+station: 18
+crossing: 192
+abandoned: 30
+
+In [27]: tagelementsvalues("curitiba.osm", "cuisine")
+mexican: 2
+chinese: 1
+german: 1
+japanese: 4
+burger: 14
+asian: 1
+barbecue: 1
+coffee_shop: 1
+kebab: 2
+turkish: 2
+pizza: 20
+sandwich: 23
+burger;sandwich: 1
+steak_house: 23
+mineira: 1
+regional: 20
+french: 1
+seafood: 1
+hamburguer,sorvetes,sucos,lanches_diversos: 1
+Churrasco: 1
+ice_cream: 1
+poland: 1
+Frango_no_balde: 1
+italian;greek: 1
+Árabe: 1
+vegetarian: 2
+italian: 17
+
+In [28]: tagelementsvalues("curitiba.osm", "maxspeed")
+20: 192
+30: 165
+50: 5
+40: 809
+60: 450
+110: 74
+70: 126
+80: 176
+
+In [29]: tagelementsvalues("curitiba.osm", "opening_hours")
+LOJAS: Segunda a Sábado: 10hs as 22hs Domingos: 14hs as 20hs PRAÇA DE ALIMENTAÇÃO: Segunda a Sábado: 10hs as 22hs Domingos: 12hs as 22hs: 1
+Sa-Su 00:00-24:00: 1
+08:00 - 20:00: 5
+Mo-Fr 13:00-19:00; Sa-Su 09:00-18:00: 1
+Sa-Su 08:00-18:00: 2
+Mo-Fr 08:00-19:00; Sa-Su 08:00-20:00: 1
+mo-fr 08:00-18:00; sa 09:00-13:000: 3
+10:00-18:00: 1
+07:00 - 20:30: 1
+9h às 12h e 13h às 18 (2ª a 6ª feira) e 12h às 18h (sábado, domingo e feriado): 1
+10:00 - 16:00: 7
+Mo-Fr 13:00-22:00; Sa 09:00-14:00: 1
+08:00-20:00: 2
+Sa-Su 09:00-18:00: 1
+9:00 - 13:00;14:00 - 18:00: 1
+Fr: 1
+Tu-Su 08:00-15:00; Sa 08:00-12:00: 1
+Mo-Fr 08:30-18:00, Sa 08:00-13:00: 1
+Mo-Sa 07:00-21:00, Su 09:00-20:00: 2
+Mo-Fr 13:00-18:00; Sa-Su 08:00-18:00: 1
+24/7: 11
+Sa-Su 08:00-19:00: 1
+Sa-Su 12:00-15:00: 1
+09:30 - 21:00: 1
+Su 1st and 3rd: 1
+Mo-Fr 08:00-18:00; Sa 08:00-12:00: 1
+Mo-Fr 10:00-19:00; Sa 10:00-13:00; PH off: 1
+9:00 - 5:00: 1
+Segunda a Sexta 9:00 as 18:00: 1
+Mo-Fr 08:00-19:00; Sa,Su 08:00-13:00; PH off: 1
+Tu-Su 08:00-15:00;Sa 08:00-12:00: 1
+Comercial de Segunda a Sabado: 1
+9:00-17:00: 1
+08:00 - 17:00: 1
+Mo-Fr 08:00-19:00; Sa 08:00-13:00; PH off: 4
+Mo-Sa 10:30-22:00; Su 14:00-22:00: 1
+Mo-Fr 18:00-23:45; Sa 11:30-23:45; Su off: 1
+Mo-Sa 08:30-20:00: 1
+Mo-Fr 08:00-18:00, Sa 08:00-13:00: 1
+Mo-Sa 011:00-24:00; Su 11:00-18:00: 1
+Ter-Dom 08:00 17:00: 1
+Mo-Sa 09:00-20:00: 1
+24 Horas: 1
+Mo-Sa 10:30-22:00; Su 12:00-22:00: 1
+Mo-Fr 08:30-20:00: 4
+Seg-Sex: 8:00 até 18:00 (não fecha para almoço) Sábado: 8:30 até 12:30: 1
+Mo-Fr 07:30-17:30: 1
+Mo-Sa 08:00-19:00, Su 09:00-13:00: 1
+Sa: 1
+Mo-Fr 09:00-16:00: 4
+Mo-Fr 09:00-12:00; 13:00-17:00: 1
+17:00 as 22:00: 1
+Mo-Fr 08:00-20:00;Sa 08:00-14:00: 1
+11:00-14:00;19:00-23:00: 1
+10:00-16:00: 1
+Mo-Fr 09:00-21:00;Sa 09:00-13:00: 1
+Mo-Sa 08:00-20:00, Su 09:00-13:00: 1
+9:00 - 17:00: 1
+Mo-Su 08:00-20:00; jan 1 off; Dec 25 off: 4
+8:00 as 22:00: 1
+Horário Comercial de Segunda a Sábado: 1
+19:00-23:30: 1
+Mo-Fr 13:00-18:00; Sa-Su 09:00-18:00: 1
+Mo-Fr 08:00-18:00: 1
+Tu-Fr 09:00-18:00;Sa-Su 10:00-18:00;PH 10:00-18:00;Mo off: 1
+Mo-Fr 08:00-21:00: 1
+Mo-Sa 13:00-00:00: 1
+Mo-Fr 08:30-14:30: 1
+Comercial: 1
+08:00 - 18:00: 1
+Segunda a Sábado , Horário Comercial: 1
+9:00 - 22:00: 1
+mo-fr 08:00-18:00; sa 09:00-13:00: 2
+
+In [30]: tagelementsvalues("curitiba.osm", "phone")
+(41) 3322-3844: 1
+(41) 3044-7778: 1
+041 30265772: 1
+41 33228229: 1
+(41) 3016-5970: 1
++55 41 3363-7209: 1
+55 41 3319 1491: 1
+(041)30260365: 1
+(41) 3286-1714: 1
++55 41 3323 1031: 1
++55 41 3324 2456: 1
+55 41 3262 3707: 1
+8854-6079: 1
+(41) 3205-3566: 1
++55 41 9934 4676: 1
+41 3092-5996: 1
+41 3383-2364: 1
++55 41 3079-2717: 1
+41 3283-5915: 1
+(41) 3322-2912: 1
++55 41 3354-2448: 1
++55 41 3354-3637: 1
++55 41 3551-1389: 1
+55 42 3246-2154: 1
+(41) 3053-8453: 1
+(41) 3262-7172: 1
++55 (41) 3276-0227: 1
++55 41 32238490: 1
++55 41 30780358: 1
+55 41 3521-6046: 1
++55 41 3556-3996: 1
+3252-6262: 1
+(41) 3264 6097: 1
+(41)3249-2695: 1
++55 (41) 3636-1548: 1
+41 32961262: 1
++55 41 3024-2757: 1
++55 41 3362-1738: 1
+(41) 3082-9648: 1
++554131524059: 1
+41 3372-2121: 1
+(41) 3257-9811: 1
++55 41 3072-7000: 1
+190: 1
+(41) 4101-8609: 1
++55 41 3222-4515: 1
++55 41 3019-9580: 1
++55 41 3249-4947: 1
+41 3028-3800: 1
++55 41 3675-5600: 1
++55 41 95183794: 1
++55 42 3222 4222: 1
+32825700: 1
+(41) 276-4917: 1
+41 3282-3159: 1
++55413349-3698: 1
++55 41 3098-8686: 1
++55 4135246715: 1
+(41) 3264-9123: 1
++55 41 3666-4383: 1
+(41) 3026-7473: 1
+(41) 3598-6636: 1
+(41) 3888-2239: 1
+3383-3015: 1
+(41) 3376-4098: 1
+55 41 30273566: 1
+(41) 3286-5153: 1
++55 41 3212-5700: 1
+(41) 3377-1657: 1
++55 41 3271-9000: 1
+41 3296 1253: 1
+(41) 3014-8014: 1
+(41) 3288-1112: 1
+41 3336-9222: 1
+55 41 88226709: 1
+55 41 8434-8005: 1
++554132485329: 1
+3245-4545: 1
+41 3342-5453: 1
+(41) 3247-7904: 1
+++55 41 3238-2032: 1
++55 41 3010-0044: 1
+3378 1515: 1
+41-30924155: 1
+(41) 3218-2408: 1
+31210257: 1
+41 3635-1201: 1
+4004-5700: 1
++55 (41) 3304-4600: 1
+(41) 3264-1762: 1
+41 3336-0785: 1
++55 41 3085 3453: 1
+(41) 3077-0408: 1
+(41) 3327-6573: 1
++55 41 36421944: 1
++55 41 3075-0100: 1
+3384-4344: 1
+(41) 3346-1989: 1
+41 3267 8827: 1
+(41) 3308-0370: 1
++55 41 3304-2266: 1
+(41) 9615-9029: 1
++55 41 21012000: 1
++55 41 3675 5800: 1
++55 (41) 3636-1060: 1
++55 41 32480535: 1
+(41) 3357-6841: 1
++55 41 3079-2504: 1
+55 41 30234041: 1
++55 41 3073-0201: 1
++55 41 3264-7234: 1
+(41) 3224-2527: 1
++55 41 3347-7000: 1
+55 041 3079-1838: 1
+(41) 3262-8857: 1
++55 41 95671321: 1
++55 41 3256-4543: 1
+55 41 3339 9615: 1
++55 (41) 3304-2222: 1
++554196938680: 1
++55 41 3154 7120: 1
++55 41 3213 8700: 1
++554132764551: 1
+41 30397856: 1
+4199904092: 1
+(41) 3022-8324: 1
+554133444444: 1
+
+In [32]: tagelementsvalues("curitiba.osm", "service")
+yard: 2
+alley: 1
+drive-through: 45
+spur: 16
+aircraft_control: 1
+bus: 2
+busway: 6
+siding: 1
+driveway: 158
+bus_way: 18
+parking_aisle: 212
+dealer;repair: 17
+
+In [33]: tagelementsvalues("curitiba.osm", "type")
+restriction: 733
+oil: 3
+route: 133
+gas: 5
+water: 1
+busway: 1
+boundary: 84
+waterway: 1
+multipolygon: 57
+
+In [34]: tagelementsvalues("curitiba.osm", "website")
+http://www.hospitaldotrabalhador.saude.pr.gov.br/: 1
+http://www.mercadorama.com.br/nac_lojas.aspx?cidade=curitiba: 1
+http://www.apcefpr.org.br/: 1
+http://www.pescatropical.com.br: 1
+http://pedalebikes.com/: 1
+http://www.funef.com.br/: 1
+http://www.jacomarsm.com.br: 1
+http://www.bikebrothers.com.br/: 1
+http://q2info.com.br: 1
+http://www.autoprime.com.br/: 1
+http://www.hopnroll.com.br/: 1
+http://www.velobikes.com.br/: 1
+https://www.facebook.com/BarBaranUcrania: 1
+http://www.bikeportella.com.br: 1
+http://www.edapam.com.br/: 1
+http://www.infraero.com.br/index.php/br/aeroportos/parana/aeroporto-afonso-pena.html: 1
+http://www.afancarmultimarcas.com.br/: 1
+http://www.thekettle.com.br/: 1
+http://www.karyza.com.br/: 1
+http://picanhabrava.com.br: 1
+http://www.kauf.com.br/: 1
+http://www.unicuritiba.edu.br/: 1
+http://www.hotelestreladosul.com.br/: 1
+www.confidencecambio.com.br: 1
+http://www.adseletro.com.br/: 1
+http://www.cervejariadavila.com.br/: 1
+http://www.esystech.com.br: 1
+http://www.divesa.com.br/: 1
+http://www.curitiba.pr.gov.br/multimidia/00083864.pdf: 2
+http://paroquiasaojorge.com.br/site/: 1
+www.hungerbikes.com.br: 1
+http://www.museuparanaense.pr.gov.br/: 1
+http://www.condorhotel.com.br/: 1
+http://akaisushibar.com.br: 1
+http://www.paranaclube.com.br/: 1
+http://www.brychtabikes.com.br/: 1
+http://www.curitiba.pr.gov.br/noticias/bosque-dos-mundiais-traz-opcao-de-lazer-em-area-sem-uso-no-portao/33292: 1
+http://www.candeias.com.br/: 1
+http://www.datacenso.com.br/: 1
+http://www.showbike.com.br/: 1
+http://www.condor.com.br/content/default/: 2
+http://www.dikmar.com.br/: 2
+http://itiban.blogspot.com: 1
+http://www.stratusveiculos.com.br/: 1
+http://www.paneolio.com.br/: 1
+http://www.lacasadisonno.com/: 1
+http://www.facebook.com/barba.hamburgueria: 1
+http://geuniversitario.com.br: 1
+http://www.fiepr.org.br/: 1
+http://www.restaurantepasargada.com.br/: 1
+http://www.armazemsantaana.com.br/: 1
+http://hotelnovalisboa.com/: 1
+http://www.johnbull.com.br/: 1
+http://www.hotelguaira.com.br/: 1
+http://www.condor.com.br: 1
+http://www.barjames.com.br: 1
+http://www.jacaunadecoracoes.com.br: 1
+http://www.venomnetwork.com.br: 1
+www.pracadojapao.wordpress.com: 1
+http://www.extra.com.br/: 1
+http://www.ETIST.com.br: 1
+http://urbs.curitiba.pr.gov.br: 1
+http://www.totopos.com.br/: 1
+http://www.hotelexclusivo.com.br/: 1
+http://www.volpeautomoveis.com.br/: 1
+http://castellbianco.com.br/: 1
+http://www.condor.com.br/content/conteudo/conteudo.view.php?id=36: 1
+http://www.policiamilitar.pr.gov.br/: 1
+www.condor.com.br: 1
+http://www.biketechcuritiba.com.br/: 1
+http://www.assembleiadedeus.org.br/: 1
+http://www.santanadeabranches.com.br/: 1
+http://www.shoppingtotalcuritiba.com.br/: 1
+http://www.facebook.com/rausecafe: 1
+http://www.hojo.com: 1
+http://www.prohansen.org/: 1
+http://www.microum.com.br/: 1
+www.facebook.com/terrabrasilcafe: 1
+http://www.lizon.com.br/: 1
+http://www.superfestval.com.br/: 1
+www.detran.pr.gov.br: 1
+http://www.minipreco.com.br/: 1
+http://www.baronbikes.com/: 1
+http://www.paoprosa.com.br: 1
+http://www.restaurantepeixinho.com.br/: 1
+http://www.subway.com.br/: 1
+http://www.zezitosbar.com.br/: 1
+http://www.clubealphaville.com.br/: 1
+http://www.colomboparkshopping.com.br/: 1
+http://www.madalosso.com.br/?v=1: 1
+http://www.hotelpromenade.com.br/: 1
+www.cloroquimica.com.br: 1
+http://www.mcdonalds.com.br/: 2
+http://www2.walmart.com.br/Site/StoreLocatorResultado.aspx?CepPrefix=82510&CepSufix=290&Tipos=3: 1
+http://www.escoteirospr.org.br/: 1
+http://www.portaldascachoeiras.com/jaja.html: 1
+http://hacienda-cafe.blogspot.com.br/: 1
+http://www.belloscar.com.br/: 2
+http://www.aca.ind.br: 1
+http://www.drogaraia.com.br/: 1
+http://www.estanciabetania.com.br/: 1
+http://www.dipiupizzaria.com.br/: 1
+http://www.pizzahut.com.br/: 1
+http://www.itaucinemas.com.br: 1
+www.ciclesradar.com.br: 1
+http://www.blucom.com.br/Condominio%20Empresarial%20Sao%20Jose.html: 1
+http://www.jamurbikes.com.br: 1
+http://marksouro.url.ph: 1
+http://www.restaurantebouquetgarni.com/: 1
+http://www.redehiperfarma.com.br: 1
+http://www.olimoeiro.com.br: 1
+www.hotelsaara.com.br: 1
+http://www.solardavanda.com.br/site/: 1
+http://www.bambinomio.com.br/: 1
+www.costafrio.com.br: 1
+http://www.mestre-cervejeiro.com/: 1
+http://www.sescpr.com.br/unidades/sesc-da-esquina/: 1
+http://www.cocelpa.com.br/: 1
+www.curitibagps.com.br: 1
+http://www.confeitariajauense.com.br: 1
+http://www.lojashavan.com.br/lojas.html: 1
+http://www.chinawok.com.br/: 1
+http://www.facebook.com/tesorosdecuba: 1
+http://www.angeloni.com.br: 1
+https://infiltrada.milharal.org/: 1
+www.star12.com.br: 1
+www.ciclessouza.com.br: 1
+http://www.victoriavilla.com.br/: 1
+http://www.churrascariadodarci.com.br/: 1
+http://www.originale.com.br/: 1
+http://www.bikesul.com/: 1
+www.nayp.com.br: 1
+http://www.seisemeiabar.com.br/: 1
+https://www.konatrishop.com.br: 1
+http://www.tokstok.com.br/: 1
+https://www.facebook.com/BarGoldieSkull/info: 1
+http://www.pr.gov.br/: 1
+http://www.urbs.curitiba.pr.gov.br/: 2
+http://zeustecnologia.com.br: 1
+http://www2.walmart.com.br/Site/StoreLocatorResultado.aspx?CepPrefix=80400&CepSufix=000&Tipos=1: 1
+http://www.sescpr.com.br/: 1
+http://www.curitiba.pr.gov.br/: 2
+http://www.sescpr.com.br/unidades/sesc-paco-da-liberdade/: 1
+http://www.angeloni.com.br/lojas/index: 1
+http://autopecasalvorada.com.br: 1
+http://www.churrascariapertutti.com.br/: 1
+urbs.curitiba.pr.gov.br: 3
+http://psolcuritiba.org/: 1
+http://www.slainteirishpub.com.br/: 1
+http://www.altogas.com.br: 1
+http://www.snookshop.com.br: 1
+http://www.viscondemotos.com.br/home/: 1
+http://www.armotorsnissan.com.br/: 1
+http://www.fiatbarigui.com.br/: 1
+www.precisao.far.br: 1
+
+In [35]: tagelementsvalues("curitiba.osm", "source")
+http://www2.bomjesus.br/sescsaojose/: 1
+Personal experience: 1
+http://www.urbs.curitiba.pr.gov.br/PORTAL/pontostaxi/pontos.php: 3
+http://www.hc.ufpr.br/?q=node/1911: 1
+http://www.sjp.pr.gov.br/portal/mapas: 35
+http://www.hostelroma.com.br: 1
+Bing e survey: 1
+http://www.evangelico.org.br/: 1
+GPS: 780
+Google Maps: 1
+Bing; GPS: 6
+ourairports.com: 18
+http://itecne.com.br/curitiba/localizacao.shtml: 1
+http://www.thalia.com.br/: 1
+bing e survey: 1
+http://itiban.blogspot.com: 1
+Lakewalker / Landsat: 1
+http://www.cluberiobranco.com.br/: 1
+ICMBio: 1
+http://pt.wikipedia.org/wiki/Omar_Shopping: 1
+http://www.mac.pr.gov.br/: 1
+http://www.parquesepracasdecuritiba.com.br/onibus/expressos/santa-candida-capao-raso.html: 3
+Infraero: 1
+http://www.fas.curitiba.pr.gov.br/conteudo.aspx?idf=75: 1
+www.erastogaertner.com.br: 1
+IPPUC: 64
+http://www.agrarias.ufpr.br/: 1
+ANEEL: 2
+Yahoo hires: 167
+http://www.27blog.eb.mil.br: 1
+http://www.sjp.pr.gov.br/mapas-do-municipio/: 136
+http://www.sjp.pr.gov.br/portal/mapas_pdf/academia.pdf: 1
+http://www.sjp.pr.gov.br/portal/mapas_pdf/italia.pdf: 2
+http://www.hotelguaira.com.br/paginas/servico.htm: 1
+http://www.sjp.pr.gov.br/portal/mapas_pdf/aguas_belas.pdf: 1
+http://guia.gazetadopovo.com.br/passeios/praca-da-espanha/719/: 2
+http://www.curitiba-parana.net/patrimonio/chafariz.htm: 2
+Yahoo hires, IBGE, Bing: 4
+http://www.tce.pr.gov.br/: 1
+http://toppark.net/index.php/unidades/top-park-vicente-machado/: 1
+http://itecne.com.br/curitiba/: 1
+http://www.parquesepracasdecuritiba.com.br/pracas/praca-da-ucrania.html: 1
+BluCom Tecnologia: 1
+survey: 88
+Owner: 1
+http://pt.wikipedia.org/wiki/Curitiba_Trade_Center: 1
+http://www.decea.gov.br/unidades/cindacta-ii/: 1
+http://www.condor.com.br/content/conteudo/conteudo.view.php?id=36: 1
+http://www.shoppingmueller.com.br/: 1
+IBGE;GPS data obtained on spot on Oct 11,2014: 1
+yahoo_imagery;GPS: 1
+http://www.sjp.pr.gov.br/portal/mapas_pdf/campina_do_taquaral.pdf: 1
+Yahoo: 9
+http://www.pibcuritiba.org.br/: 1
+http://www.shoppingnovobatel.com.br/: 1
+GPS data collected on spot, 11 Nov, 2014, DougCWB: 1
+yahoo_imagery; Bing: 4
+http://www.unicuritiba.edu.br/: 1
+http://www.hgec.eb.mil.br/: 1
+Bing: 2173
+yahoo: 29
+http://portal.tjpr.jus.br/web/juri: 1
+Survey: 3
+http://www.clubeurca.com.br/index.php?option=com_content&view=article&id=24&Itemid=10: 1
+Guia CM 2004: 169
+IBGE: 1237
+http://pt.wikipedia.org/wiki/Museu_Oscar_Niemeyer: 1
+http://shoppingomar.com.br/?acao=localizacao: 1
+http://www.parquesepracasdecuritiba.com.br/pracas/praca-general-osorio.html: 1
+http://www.lojashavan.com.br/lojas.html: 1
+GPS; Bing: 1
+http://www.hemobanco.com.br/: 1
+yahoo_imagery; Bing; Bing: 2
+http://www.parquesepracasdecuritiba.com.br/onibus/expressos/centenario-campo-comprido.html: 1
+yahoo_imagery; survey: 1
+yahoo imagery: 2
+http://www.moro.com.br/vollard/: 1
+http://www.cageo.ufpr.br/home.php: 1
+Yahoo hires, Bing: 1
+GPS, bing: 1
+http://www.emporis.com/building/curitibatradecenter-curitiba-brazil: 1
+http://www.ici.curitiba.org.br: 1
+Gás: 1
+http://www.subwaypertodevoce.com.br/#mapa: 1
+Bing; yahoo_imagery: 2
+oneway: 31
+http://www2.walmart.com.br/Site/StoreLocatorResultado.aspx?CepPrefix=80400&CepSufix=000&Tipos=1: 1
+http://www.angeloni.com.br/lojas/index: 1
+http://ippucweb.ippuc.org.br/Bancodedados/Curitibaemdados/Curitiba_em_dados_Pesquisa.htm: 30
+yahoo_imagery: 3207
+Estação Tubo Mercês: 1
+yahoo_imagery;Bing: 1
+Bing;Tracksource: 1
+Corredor Bioceanico: 1
+bing: 531
+http://www.trt9.jus.br: 2
+Bing, GPS: 1
+http://www.infraero.gov.br/index.php/br/aeroportos/parana/aeroporto-de-bacacheri.html: 1
+http://www.rua24horascuritiba.com.br/: 1
+GPS, Bing: 4
+http://www.crystalplaza.com.br/: 2
+
+In [43]: tagelementsvalues("curitiba.osm", "ref")
+660: 2
+165: 2
+4: 2
+8: 2
+93 B: 2
+7: 2
+92 B: 2
+BFH: 2
+71 A: 2
+71 B: 4
+020: 2
+022: 2
+59: 2
+58: 2
+PR-082: 20
+67: 2
+83406-540: 2
+777: 2
+PR-421: 14
+PR-423: 48
+Rodoanel Contorno Leste: 8
+83406-620: 2
+PR-427: 2
+Rodoanel Contorno Sul: 4
+80: 4
+84: 2
+PR: 2
+86 B: 2
+86 A: 4
+PR-025: 22
+3: 2
+Rua Vicente Michelotto: 12
+301: 2
+303: 2
+Rota 66: 2
+PR-418: 50
+AG 0020: 2
+PR-415: 60
+PR-417: 24
+PR-410: 24
+PR-411: 26
+Rua Manoel Muller de Siqueira: 2
+Rodoanel Contorno Norte: 12
+PR-090: 40
+PR-092: 48
+614 A: 2
+614 B: 4
+PR-408: 10
+102A: 2
+BR-116: 352
+66: 2
+102B: 2
+83406-520: 2
+050: 4
+85 B: 2
+HOTEL: 2
+Sentido Santa Candida: 4
+Autodromo São José: 4
+2: 2
+6: 2
+561: 2
+103A: 2
+461: 2
+462: 2
+BR-476: 328
+BR-277: 348
+15/33: 2
+Barreirinha - Cachoeira: 2
+11: 2
+10: 2
+13: 2
+12: 2
+14: 2
+603: 2
+PR-506: 58
+BR-376: 110
+Estrada Velha de Campo Largo: 2
+PR-509: 14
+7A: 2
+BRAVO: 2
+INDIA: 2
+Copel Atuba: 2
+1: 2
+5: 2
+9: 2
+203: 2
+466: 2
+11/29: 2
+CHARLIE: 2
+778: 4
+PR-510: 42
+PR-513: 2
+18-36: 2
+DELTA: 2
+ALPHA: 2
+
+In [44]: tagelementsvalues("curitiba.osm", "restriction")
+no_left_turn;no_right_turn: 2
+no_u_turn,no_left_turn: 2
+no_u_turn: 686
+no_left_turn: 556
+no_right_turn: 166
+only_straight_on: 42
+right_only: 2
+no_straight_on: 8
+
+In [47]: tagelementsvalues("curitiba.osm", "segregated")
+yes: 2
+no: 214
+
+In [48]: tagelementsvalues("curitiba.osm", "shop")
+bicycle: 98
+department_store: 16
+newsagent: 4
+ShopCenter: 2
+hardware: 10
+jewelry: 2
+computer: 2
+motorcycle: 10
+toys: 4
+florist: 12
+yes: 4
+mattress: 2
+car_repair: 70
+market: 2
+confectionery: 8
+alcohol: 6
+no: 2
+pet: 6
+boutique: 2
+convenience: 54
+butcher: 8
+sports: 6
+motorcycle_repair: 2
+stationery: 4
+electronics: 4
+furniture: 6
+drugstore: 2
+chemist: 4
+laundry: 6
+beauty: 2
+hairdresser: 14
+fishmonger: 2
+gas: 4
+funeral: 4
+beverages: 4
+kiosk: 56
+supermarket: 256
+hifi: 4
+travel_agency: 2
+doityourself: 34
+tyres: 10
+grocery: 2
+copyshop: 2
+fairtrade: 2
+gift: 28
+car: 114
+fishing: 10
+mall: 44
+bed: 2
+variety_store: 2
+bakery: 92
+books: 6
+car_parts: 6
+garden_centre: 8
+greengrocer: 2
+clothes: 16
+
+In [49]: tagelementsvalues("curitiba.osm", "sport")
+skating: 2
+multi: 6
+basketball: 28
+cycling: 2
+tennis: 80
+skateboard: 4
+10pin: 2
+volleyball: 18
+gymnastics: 4
+beachvolleyball: 2
+motor: 2
+baseball: 2
+athletics: 6
+soccer: 180
+exercise: 2
+swimming: 28
+
+In [50]: tagelementsvalues("curitiba.osm", "surface")
+asphalt; cobblestone: 2
+terrain: 30
+asphalt;unpaved: 2
+earth: 2
+compacted: 368
+ground: 486
+asphalt: 9446
+unpaved; asphalt: 2
+unpaved: 1242
+mud: 20
+wood: 4
+gravel: 134
+cobblestone:flattened: 2
+paved: 798
+dirt: 1486
+grass_paver: 6
+cobblestone: 204
+paving_stones: 36
+concrete: 56
+sand: 30
+fine_gravel: 54
+grass: 20
+
+In [51]: tagelementsvalues("curitiba.osm", "survey:date")
+2014-12-30: 114
+2014-03-15: 4
+2014-03-14: 90
+2014-10-05: 190
+2014-05-07: 64
+2014-02-13: 96
+2014-02-14: 98
+2014-02-02: 8
+2014-02-17: 176
+2014-02-18: 60
+2014-02-24: 276
+2014-02-27: 122
+2014-01-31: 10
+2014-01-30: 36
+
+In [52]: tagelementsvalues("curitiba.osm", "tourism")
+information: 24
+yes: 2
+picnic_site: 6
+viewpoint: 40
+museum: 38
+hotel: 84
+zoo: 4
+caravan_site: 2
+attraction: 20
+aquarium: 2
+artwork: 10
+gallery: 2
+guest_house: 32
+motel: 8
+camp_site: 18
+hostel: 8
+
+In [53]: tagelementsvalues("curitiba.osm", "traffic_calming")
+bump: 216
+hump: 64
+choker: 8
+rumble_strip: 6
+table: 2
+yes: 12
+
+In [54]: tagelementsvalues("curitiba.osm", "tunnel")
+building_passage: 4
+yes: 210
+culvert: 4
+no: 2
+
+In [55]: tagelementsvalues("curitiba.osm", "type")
+restriction: 1466
+oil: 6
+route: 266
+gas: 10
+water: 2
+busway: 2
+boundary: 168
+waterway: 2
+multipolygon: 114
+
+In [56]: tagelementsvalues("curitiba.osm", "waterway")
+canal: 4
+drain: 14
+stream: 418
+lago Parque cambuí: 2
+ditch: 14
+dam: 16
+weir: 4
+waterfall: 10
+river: 130
+riverbank: 38
+
+In [57]: tagelementsvalues("curitiba.osm", "wheelchair")
+limited: 20
+yes: 138
+no: 54
+
+In [7]: unique_users('curitiba.osm')
+set(['658189', '2323539', '45027', '383596', '70696', '580737', '486754', '201359', '127573', '1708813', '1755551', '1848149', '2360165', '1977677', '1772211', '1272947', '691362', '1898193', '1898196', '155867', '4731', '2606876', '29320', '82614', '2201109', '437598', '293067', '360183', '26687', '33812', '336460', '2038943', '1051910', '690267', '388211', '2536362', '1198074', '549284', '359963', '7702', '2379732', '216204', '1736832', '1211056', '1708043', '1924509', '1897476', '24126', '2396038', '94659', '2093289', '2001217', '1225782', '601072', '855190', '701711', '2078923', '230234', '2174282', '380517', '149606', '96587', '84946', '428279', '1883553', '1832883', '2565060', '1372545', '2062134', '1427833', '713822', '335271', '645704', '368256', '301604', '5359', '388394', '1128741', '186193', '89042', '937790', '2041317', '161619', '2084193', '148356', '90286', '249378', '2257113', '93702', '1897732', '324758', '1898661', '2029313', '1890065', '79543', '2363824', '582148', '162061', '506085', '1898354', '20368', '8339', '1264404', '72555', '92084', '643851', '1753088', '2098650', '1705348', '1310899', '110263', '323295', '7033', '2253311', '674428', '2276074', '166129', '101150', '1430913', '2622158', '495442', '190869', '2602109', '1915192', '81297', '1854688', '2163582', '100897', '18069', '22701', '2055503', '2506011', '722137', '2542147', '28559', '2019356', '1881485', '2177766', '1795075', '362391', '610601', '683175', '1842197', '321529', '1973591', '630782', '294552', '2248588', '438811', '2016453', '679196', '1732962', '1723316', '54223', '452541', '1618207', '507357', '1811853', '1828064', '441877', '714309', '31385', '894366', '2079725', '1469010', '1721114', '26299', '172439', '2319774', '369579', '1821806', '237049', '26599', '1840640', '1348676', '1190212', '26798', '499754', '297007', '1714450', '2284747', '505120', '1593814', '2260445', '178186', '396743', '150080', '883031', '83032', '549478', '9475', '24551', '1840265', '462759', '463504', '463507', '122327', '78656', '7396', '2375890', '9176', '1694420', '494050', '51045', '2219338', '1240849', '407920', '1686580', '1701974', '2240442', '1897557', '17497', '159492', '2469044', '597250', '2175966', '210371', '2163454', '965951', '2259193', '1823803', '2357590', '219078', '23785', '1869976', '1051682', '825350', '83557', '534149', '614719', '181135', '2323545', '213831', '1460228', '2107473', '215693', '2388614', '1828271', '96069', '2491194', '1647730', '39867', '513493', '2034969', '1829683', '930470', '2455614', '207745', '187112', '2209906', '633341', '416502', '2104979', '1932048', '2283125', '794948', '404013', '397053', '456219', '1246157', '577765', '1054669', '275821', '644560', '66391', '152289', '214969', '139043', '65148', '1052944', '690051', '426718', '145231', '2291891', '713587', '215964', '190389', '27293', '44221', '2237651', '103253', '1059206', '2420446', '1872509', '1199293', '395080', '2360155', '88164', '1435803', '1679', '919753', '37200', '1910493', '1793905', '559551', '2227129', '767848', '1260645', '584267', '409438', '1554107', '355617', '158826', '614802', '482918', '1709892', '1960751', '539440', '1861079', '2253799', '1502453', '2037473', '28237', '2017515', '2520533', '1137411', '372910', '754154', '962387', '591237', '378374', '1856619', '387066', '2074401', '1069176', '668889', '64212', '170821', '301127', '312448', '1820698', '2362570', '604999', '349620', '1959009', '1226633', '82797', '1418137', '1772368', '1061211', '149876', '278085', '712387', '290680', '1741511', '1802219', '19532', '2348011', '291841', '617092', '1596', '1898153', '661136', '2438940', '1965529', '129061', '2378776', '2069788', '1204081', '617177', '1249205', '1960024', '330274', '1642259', '1642552', '381516', '1782960', '1624361', '1873979', '300042', '2510085', '2132742', '717462', '428689', '38134', '2101762', '217070', '641751', '610969', '1420318', '2041395', '124550', '2355237', '2027327', '92274', '1875819', '6975', '72235', '605039', '1657554'])
